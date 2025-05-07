@@ -16,22 +16,24 @@ public class Main {
      * @param args the command line arguments
      */
     public void menuInicio(){
-        System.out.println("Hola bienvenido al registro de credenciales");
-        System.out.println(""
+        System.out.print(""
                 + "+---------------------------+\n"
                 + "|            MENU           |\n"
                 + "+---------------------------+\n"
                 + "| 1 | Agregar Credencial    |\n"
                 + "| 2 | Ver Credenciales      |\n"
                 + "| 0 | Salir                 |\n"
-                + "+---------------------------+");
+                + "+---------------------------+\n"
+                + "-->");
     }
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-                    Inventario inventario = Inventario.getInstancia();
         Main main = new Main();
+        Scanner input = new Scanner(System.in);
+        Inventario inventario = Inventario.getInstancia();
+        //ConfiguracionGloba configuracionGloba = ConfiguracionGloba.getInstancia();
         Credencial credencialBase = new Credencial();
         boolean con = true;
+        System.out.println("Hola bienvenido al registro de credenciales");
         while(con){
             main.menuInicio();
             String eleccion = input.nextLine();
@@ -40,18 +42,17 @@ public class Main {
                     System.out.println("eleccion 1");
                     Credencial credencial = credencialBase.clone();
                     System.out.println("Agrege el nombre :");
-                    String nombre = input.nextLine();
-                    credencial.setNombre(nombre);
+                    String nombre = input.nextLine();                    
                     System.out.println("Agrege el apellido :");
                     String apellido = input.nextLine();
-                    credencial.setApellido(apellido);
                     System.out.println("Agrege el rut :");
                     String rut = input.nextLine();
-                    credencial.setRut(rut);
                     System.out.println("Agrege el cargo :");
                     String cargo = input.nextLine();
-                    credencial.setCargo(cargo);
                     inventario.agregarCredencial(credencial);
+                    
+                    credencial.modificarCampos(nombre, apellido, cargo, rut);
+                    System.out.println("Credencial agregada con exito");
                     break;
                 case "2":
                     inventario.verCredenciales();

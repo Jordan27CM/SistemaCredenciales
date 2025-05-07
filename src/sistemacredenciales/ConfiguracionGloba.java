@@ -14,8 +14,8 @@ public class ConfiguracionGloba {
     private String lugar;
 
     private ConfiguracionGloba() {
-        this.fecha = "";
-        this.lugar = "";
+        this.fecha = "01/01/2026";
+        this.lugar = "Santiago de Chile";
     }
     
     public static ConfiguracionGloba getInstancia(){
@@ -31,7 +31,6 @@ public class ConfiguracionGloba {
 
     @Override
     public String toString() {
-        return "ConfiguracionGlobal{" + "instancia=" + instancia + ", fecha=" + fecha + ", lugar=" + lugar + '}';
+        return "ConfiguracionGloba{" + "fecha=" + fecha + ", lugar=" + lugar + '}';
     }
-    
 }
