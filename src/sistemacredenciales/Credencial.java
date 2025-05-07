@@ -43,7 +43,4 @@ public class Credencial implements Cloneable{
             throw new AssertionError();
         }
     }
-    
-    
-     
 }

@@ -10,12 +10,15 @@ package sistemacredenciales;
  */
 public class ConfiguracionGloba {
     private static ConfiguracionGloba instancia;
-    private String fecha;
-    private String lugar;
+    private String nombreEvento;
+    private int duracionEstandar;
+    private String idioma;
+    
 
     private ConfiguracionGloba() {
-        this.fecha = "01/01/2026";
-        this.lugar = "Santiago de Chile";
+        this.nombreEvento = "Festival De Musica";
+        this.duracionEstandar = 3;
+        this.idioma = "Español";
     }
     
     public static ConfiguracionGloba getInstancia(){
@@ -24,13 +27,14 @@ public class ConfiguracionGloba {
         }
         return instancia;
     }
-    public void personalizar(String fecha, String lugar){
-        this.fecha = fecha;
-        this.lugar = lugar;
+    public void personalizar(String nombreEvento, int duracionEvento, String idioma){
+        this.nombreEvento = nombreEvento;
+        this.duracionEstandar = duracionEvento;
+        this.idioma = idioma;
     }
 
     @Override
     public String toString() {
-        return "ConfiguracionGloba{" + "fecha=" + fecha + ", lugar=" + lugar + '}';
+        return "ConfiguracionGloba{" + "nombreEvento=" + nombreEvento + ", duracionEstandar=" + duracionEstandar + ", idioma=" + idioma + '}';
     }
 }
