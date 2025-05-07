@@ -1,6 +1,6 @@
 ## Generador credenciales para evento
 ### Integrantes
--Jordan Murillo
+-Jordan Murillo - patrones de diseño
 ---
 ## Objetivo
 El objetivo de este proyecto es crear un programa para la generacion de credenciales para un evento en java donde se ejerciten los patrones de diseño singleton y prototype el programa debe de poder crear credenciales con nombre, apellido, rut y cargo esta clase debe de implementar la interfas de Cloneable para poder clonar una instancia y crear objetos de forma rapida la clase de ConfiguracionGlobal debe implementar el patron singleton con su metodo para obtener una instancia 
