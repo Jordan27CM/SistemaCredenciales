@@ -1,3 +1,3 @@
 # Generador credenciales para evento
-###Integrantes
+### Integrantes
 -Jordan Murillo
